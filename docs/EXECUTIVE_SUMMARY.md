@@ -170,21 +170,23 @@ A **production-ready API system** that detects whether voice samples are AI-gene
 
 ### Technical Artifacts
 1. ✅ **API Codebase**
-   - `main.py` - FastAPI application
+   - `app_main.py` - FastAPI application (main entry point)
+   - `app/` - Application module (config, models, auth, audio processing, classifier)
    - `train_model.py` - Model training pipeline
-   - `test_api.py` - Testing client
+   - `test_api.py` - CLI testing client
 
-2. ✅ **Documentation**
-   - `README.md` - Project overview
-   - `API_DOCUMENTATION.md` - Complete API reference
-   - `TECHNICAL_GUIDE.md` - Implementation details
-   - `ROADMAP.md` - Future enhancements
-   - `BUSINESS_PLAN.md` - Business strategy
+2. ✅ **Documentation** (in `docs/`)
+   - `README.md` - Project overview (root)
+   - `docs/API_DOCUMENTATION.md` - Complete API reference
+   - `docs/TECHNICAL_GUIDE.md` - Implementation details
+   - `docs/ROADMAP.md` - Future enhancements
+   - `docs/BUSINESS_PLAN.md` - Business strategy
 
 3. ✅ **Deployment**
    - `Dockerfile` - Container configuration
    - `docker-compose.yml` - Multi-service setup
    - `requirements.txt` - Python dependencies
+   - `config/` - Nginx, Prometheus, and database configs
 
 4. ⏳ **Models** (To be trained)
    - Ensemble classifier models
