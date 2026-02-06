@@ -11,19 +11,46 @@ This is a **comprehensive, production-ready** AI voice detection system with com
 ```
 voice_detection_api/
 │
-├── 📄 EXECUTIVE_SUMMARY.md         ⭐ START HERE - Complete project overview
 ├── 📄 README.md                     Project documentation & quick start
-├── 📄 API_DOCUMENTATION.md          Complete API reference
-├── 📄 BUSINESS_PLAN.md              Business strategy & monetization
-├── 📄 ROADMAP.md                    Future upgrades & innovation
-├── 📄 TECHNICAL_GUIDE.md            Deep technical implementation
+├── 📄 CONTRIBUTING.md               Contributing guidelines
+├── 📄 CHANGELOG.md                  Version history
+├── 📄 LICENSE                       MIT License
 │
-├── 🐍 main.py                       FastAPI application (core API)
+├── 📂 docs/                         Documentation
+│   ├── EXECUTIVE_SUMMARY.md         ⭐ START HERE - Complete project overview
+│   ├── API_DOCUMENTATION.md         Complete API reference
+│   ├── BUSINESS_PLAN.md             Business strategy & monetization
+│   ├── ROADMAP.md                   Future upgrades & innovation
+│   ├── TECHNICAL_GUIDE.md           Deep technical implementation
+│   ├── GET_APIKEY.md                API key generation guide
+│   ├── QUICKSTART.md                Quick setup guide
+│   └── PROJECT_INDEX.md             This file map
+│
+├── 📂 app/                          Application module
+│   ├── __init__.py
+│   ├── config.py                    Settings & environment management
+│   ├── models.py                    Pydantic request/response models
+│   ├── auth.py                      API key auth & rate limiting
+│   ├── audio_processor.py           Audio preprocessing & feature extraction
+│   └── classifier.py                ML classification logic
+│
+├── 📂 tests/                        Test suite
+│   └── test_api.py                  Unit tests (pytest)
+│
+├── 📂 config/                       Configuration files
+│   ├── nginx.conf                   Reverse proxy config
+│   ├── prometheus.yml               Metrics config
+│   └── init.sql                     Database initialization
+│
+├── 🐍 app_main.py                   FastAPI main application (entry point)
+├── 🐍 main.py                       Alternative entry point
 ├── 🐍 train_model.py                Model training pipeline
-├── 🐍 test_api.py                   Testing client
+├── 🐍 test_api.py                   CLI testing client
 │
 ├── 🐳 Dockerfile                    Container configuration
+├── 🐳 docker-compose.yml            Full stack orchestration
 ├── 📋 requirements.txt              Python dependencies
+├── 📋 .env.example                  Environment variable template
 │
 └── 📊 Complete ecosystem for production deployment
 ```
@@ -34,25 +61,25 @@ voice_detection_api/
 
 ### For Developers
 1. Read `README.md` for setup instructions
-2. Review `main.py` for API implementation
-3. Check `API_DOCUMENTATION.md` for endpoint details
+2. Review `app_main.py` for API implementation
+3. Check `docs/API_DOCUMENTATION.md` for endpoint details
 4. Use `test_api.py` to test locally
 
 ### For Technical Leaders
-1. Start with `EXECUTIVE_SUMMARY.md`
-2. Review `TECHNICAL_GUIDE.md` for architecture
-3. Check `ROADMAP.md` for scalability plan
+1. Start with `docs/EXECUTIVE_SUMMARY.md`
+2. Review `docs/TECHNICAL_GUIDE.md` for architecture
+3. Check `docs/ROADMAP.md` for scalability plan
 4. Assess implementation timeline
 
 ### For Business Stakeholders
-1. Read `EXECUTIVE_SUMMARY.md` first
-2. Review `BUSINESS_PLAN.md` for market analysis
+1. Read `docs/EXECUTIVE_SUMMARY.md` first
+2. Review `docs/BUSINESS_PLAN.md` for market analysis
 3. Check financial projections
 4. Understand go-to-market strategy
 
 ### For Investors
-1. `EXECUTIVE_SUMMARY.md` - Overview
-2. `BUSINESS_PLAN.md` - Market opportunity ($5B+)
+1. `docs/EXECUTIVE_SUMMARY.md` - Overview
+2. `docs/BUSINESS_PLAN.md` - Market opportunity ($5B+)
 3. Financial projections ($10M ARR Year 3)
 4. Technical moat and competitive advantages
 
@@ -60,7 +87,7 @@ voice_detection_api/
 
 ## 📋 DOCUMENT SUMMARIES
 
-### 1. EXECUTIVE_SUMMARY.md ⭐ **START HERE**
+### 1. docs/EXECUTIVE_SUMMARY.md ⭐ **START HERE**
 **Purpose**: Complete project overview and implementation checklist
 
 **Contents**:
@@ -92,7 +119,7 @@ voice_detection_api/
 
 ---
 
-### 3. API_DOCUMENTATION.md
+### 3. docs/API_DOCUMENTATION.md
 **Purpose**: Complete API reference
 
 **Contents**:
@@ -108,7 +135,7 @@ voice_detection_api/
 
 ---
 
-### 4. BUSINESS_PLAN.md
+### 4. docs/BUSINESS_PLAN.md
 **Purpose**: Business strategy and monetization
 
 **Contents**:
@@ -125,7 +152,7 @@ voice_detection_api/
 
 ---
 
-### 5. ROADMAP.md
+### 5. docs/ROADMAP.md
 **Purpose**: Future enhancements and innovation
 
 **Contents**:
@@ -149,7 +176,7 @@ voice_detection_api/
 
 ---
 
-### 6. TECHNICAL_GUIDE.md
+### 6. docs/TECHNICAL_GUIDE.md
 **Purpose**: Deep technical implementation
 
 **Contents**:
@@ -167,7 +194,7 @@ voice_detection_api/
 
 ---
 
-### 7. main.py
+### 7. app_main.py
 **Purpose**: FastAPI application - the core API
 
 **Contents**:
@@ -177,7 +204,7 @@ voice_detection_api/
 - Model inference
 - Error handling
 - Logging and monitoring
-- ~300 lines of production-ready code
+- ~330 lines of production-ready code
 
 **This is**: The heart of the system - fully functional API
 
@@ -291,7 +318,7 @@ Every component is **production-ready**:
 
 ### Immediate (This Week)
 1. Review all documentation
-2. Run local API (`uvicorn main:app --reload`)
+2. Run local API (`uvicorn app_main:app --reload`)
 3. Test with `test_api.py`
 4. Understand architecture
 
@@ -361,18 +388,18 @@ Every component is **production-ready**:
 ## 📞 SUPPORT & QUESTIONS
 
 For questions about implementation:
-- Review `TECHNICAL_GUIDE.md`
-- Check `API_DOCUMENTATION.md`
+- Review `docs/TECHNICAL_GUIDE.md`
+- Check `docs/API_DOCUMENTATION.md`
 - Examine code comments in `.py` files
 
 For business inquiries:
-- Review `BUSINESS_PLAN.md`
+- Review `docs/BUSINESS_PLAN.md`
 - Check financial projections
 - See go-to-market strategy
 
 For strategic planning:
-- Review `ROADMAP.md`
-- Check `EXECUTIVE_SUMMARY.md`
+- Review `docs/ROADMAP.md`
+- Check `docs/EXECUTIVE_SUMMARY.md`
 - Assess risk analysis
 
 ---

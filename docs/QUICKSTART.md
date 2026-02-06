@@ -242,8 +242,8 @@ Key settings:
 ## 📞 Support
 
 - **API Docs**: http://localhost:8000/docs
-- **Technical Guide**: See `TECHNICAL_GUIDE.md`
-- **Business Plan**: See `BUSINESS_PLAN.md`
+- **Technical Guide**: See `docs/TECHNICAL_GUIDE.md`
+- **Business Plan**: See `docs/BUSINESS_PLAN.md`
 
 ---
 

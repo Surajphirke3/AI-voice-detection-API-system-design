@@ -81,6 +81,7 @@ curl -X POST "https://api.example.com/detect" \
 - [📡 API Documentation](#-api-documentation)
 - [📊 Model Performance](#-model-performance)
 - [🏗️ Architecture](#️-architecture)
+- [📂 Project Structure](#-project-structure)
 - [🚢 Deployment](#-deployment)
 - [⚙️ Configuration](#️-configuration)
 - [🧪 Testing](#-testing)
@@ -356,7 +357,7 @@ All `/detect` requests require an API key in the `X-API-Key` header.
 X-API-Key: your_api_key_here
 ```
 
-> 💡 **Get your API key**: For development, use `demo_key_12345`. For production, [generate a secure key](GET_APIKEY.md).
+> 💡 **Get your API key**: For development, use `demo_key_12345`. For production, [generate a secure key](docs/GET_APIKEY.md).
 
 ---
 
@@ -564,6 +565,53 @@ X-RateLimit-Remaining-Hour: 987
 
 ---
 
+## 📂 Project Structure
+
+```
+├── README.md                     # Project documentation (this file)
+├── CONTRIBUTING.md               # Contributing guidelines
+├── CHANGELOG.md                  # Version history
+├── LICENSE                       # MIT License
+│
+├── docs/                         # Documentation
+│   ├── API_DOCUMENTATION.md      # Complete API reference
+│   ├── BUSINESS_PLAN.md          # Business strategy & monetization
+│   ├── EXECUTIVE_SUMMARY.md      # Project overview
+│   ├── GET_APIKEY.md             # API key generation guide
+│   ├── PROJECT_INDEX.md          # Full project file map
+│   ├── QUICKSTART.md             # Quick setup guide
+│   ├── ROADMAP.md                # Future upgrades & innovation
+│   └── TECHNICAL_GUIDE.md        # Deep technical implementation
+│
+├── app/                          # Application module
+│   ├── __init__.py
+│   ├── config.py                 # Settings & environment management
+│   ├── models.py                 # Pydantic request/response models
+│   ├── auth.py                   # API key auth & rate limiting
+│   ├── audio_processor.py        # Audio preprocessing & feature extraction
+│   └── classifier.py             # ML classification logic
+│
+├── tests/                        # Test suite
+│   └── test_api.py               # Unit tests (pytest)
+│
+├── config/                       # Configuration files
+│   ├── nginx.conf                # Reverse proxy config
+│   ├── prometheus.yml            # Metrics config
+│   └── init.sql                  # Database initialization
+│
+├── app_main.py                   # FastAPI main application (entry point)
+├── main.py                       # Alternative entry point
+├── train_model.py                # Model training pipeline
+├── test_api.py                   # CLI testing client
+│
+├── Dockerfile                    # Container configuration
+├── docker-compose.yml            # Full stack orchestration
+├── requirements.txt              # Python dependencies
+└── .env.example                  # Environment variable template
+```
+
+---
+
 ## 🚢 Deployment
 
 ### Docker Compose (Recommended)
@@ -732,7 +780,7 @@ locust -f tests/load_test.py --host=http://localhost:8000
 - [ ] Webhook notifications
 - [ ] SaaS offering
 
-See [ROADMAP.md](ROADMAP.md) for detailed timeline.
+See [ROADMAP.md](docs/ROADMAP.md) for detailed timeline.
 
 ---
 
